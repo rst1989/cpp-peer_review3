@@ -1,10 +1,8 @@
 #define DATE_CHECKER_MACROS(object_name, field_name, left_side, right_side) \
-    do {    \
         if (object_name.field_name < left_side) \
             throw std::domain_error(#field_name" is too small"); \
         if (object_name.field_name > right_side) \
-            throw std::domain_error(#field_name" is too big"); \
-    } while (0);
+            throw std::domain_error(#field_name" is too big");
 
 
 void CheckDateTimeValidity(const DateTime& dt) {  
